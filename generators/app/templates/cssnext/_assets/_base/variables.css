@@ -1,0 +1,20 @@
+/**
+ * ====================================================================
+ * ==  @varialbes  ==
+ * ====================================================================
+ */
+
+:root {
+  /* sizes */
+  --base-size: 16px;
+  --golden: 1.618;
+  --base-margin: calc(var(--base-size) * var(--golden));
+
+  /* colors */
+  --light: #FFFFFF;
+  --dark: #333333;
+
+  --gray: #CCCCCC;
+  --light-gray: #EEEEEE;
+  --dark-gray: #999999;
+} /* end-root */

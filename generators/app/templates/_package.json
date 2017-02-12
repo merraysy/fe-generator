@@ -1,0 +1,58 @@
+{
+  "private": true,
+  "engines": {
+    "node": ">=4"
+  },
+  "name": "generator-hf-fullstack",
+  "description": "Hidden Founders fullstack yeoman generator",
+  "scripts": {<% if (includeUnitTests) { %>
+    "test": "karma start karma.conf.js"<% } %>
+  },
+  "author": "Mohammed Erraysy",
+  "license": "MIT",
+  "devDependencies": {<% if (includeUnitTests && useAngularjs) { %>
+    "jasmine": "^2.4.1",
+    "karma": "^1.1.1",
+    "karma-jasmine": "^1.0.2",
+    "karma-phantomjs-launcher": "^1.0.1",<% } if (useAngularjs) { %>
+    "gulp-angular-templatecache": "^2.0.0",
+    "gulp-ng-annotate": "^2.0.0",
+    "gulp-sort": "^2.0.0",
+    "gulp-add-src": "^0.2.0",<% } if (useSass) { %>
+    "gulp-sass": "^2.3.2",<% } if (useStylus) { %>
+    "gulp-stylint": "^3.0.0",
+    "gulp-stylus": "^2.5.0",<% } if (!useSass) { %>
+    "lost": "^7.0.3",<% } if (!useSass && includeRucksack) { %>
+    "rucksack-css": "^0.8.6",<% } if (useCssnext) { %>
+    "stylelint": "^7.1.0",<% } if (useCssnext) { %>
+    "postcss-cssnext": "^2.7.0",
+    "postcss-import": "^8.1.2",<% } %>
+    "connect-history-api-fallback": "^1.3.0",
+    "autoprefixer": "^6.4.0",
+    "browser-sync": "^2.13.0",
+    "del": "^2.2.1",
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^3.0.1",
+    "gulp-imagemin": "^3.0.3",
+    "gulp-filter": "^4.0.0",
+    "gulp-inject": "^4.1.0",
+    "gulp-load-plugins": "^1.2.4",
+    "gulp-plumber": "^1.1.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-useref": "^3.1.0",
+    "gulp-postcss": "^6.1.1",
+    "lazypipe": "^1.0.1",
+    "run-sequence": "^1.2.2"
+  },
+  "dependencies": {},
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "node": true<% if (includeUnitTests) { %>,
+      "jasmine": true<% } %>
+    }
+  }
+}

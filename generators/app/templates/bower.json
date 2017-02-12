@@ -1,0 +1,27 @@
+{
+  "name": "hf-fullstack",
+  "description": "Hidden Founders fullstack yeoman generator",
+  "main": "index.js",
+  "authors": [
+    "Mohammed Erraysy"
+  ],
+  "license": "MIT",
+  "homepage": "https://opensource.hiddenfounders.com/",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {<% if (!useAngularjs) { %>
+    "angular": "^1.5.7",
+    "angular-ui-router": "ui-router#^0.3.1",<% } %>
+    "normalize-css": "normalize.css#^4.2.0"<% if (useSass) { %>,
+    "bourbon": "^4.2.7",
+    "neat": "^1.8.0"<% } %>
+  },
+  "devDependencies": {<% if (!useAngularjs) { %>
+    "angular-mocks": "^1.5.8"<% } %>
+  }
+}

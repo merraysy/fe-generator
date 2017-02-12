@@ -1,0 +1,25 @@
+<div class="hero">
+  <header>
+    <h1>Yeoman Fullstack Generator</h1>
+  </header>
+
+  <section>
+    <h2>Generated goods</h2>
+
+    <ul class="list generated">
+      <li ng-repeat="item in data.genList">{{ item }}</li>
+    </ul> <!-- end-list -->
+  </section>
+
+  <section>
+    <h2>Installed libraries</h2>
+
+    <ul class="list libraries">
+      <li ng-repeat="item in data.libList">{{ item }}</li>
+    </ul> <!-- end-list -->
+  </section>
+
+  <footer>
+    <p>Crafted by folks at <a href="https://hiddenfounders.com">Hidden Founders</a>.</p>
+  </footer>
+</div> <!-- end-hero -->

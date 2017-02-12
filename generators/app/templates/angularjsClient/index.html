@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="app" ng-controller="MainCtrl as main">
+  <head>
+    <base href="/">
+    <meta charset="utf-8">
+    <title>{{ pageTitle }}</title>
+
+    <!-- build:css styles/vendor.css -->
+    <link rel="stylesheet" href="lib/normalize-css/normalize.css">
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+  </head>
+  <body>
+
+    <div class="container" ui-view></div> <!-- end-container -->
+
+    <!-- build:js scripts/vendor.js -->
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="lib/angular-mocks/angular-mocks.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js scripts/app.js -->
+    <!-- inject:js -->
+    <script src="app.module.js"></script>
+    <script src="components/welcome/welcome.module.js"></script>
+    <script src="components/welcome/welcome.controller.js"></script>
+    <!-- endinject -->
+    <!-- endbuild -->
+  </body>
+</html>

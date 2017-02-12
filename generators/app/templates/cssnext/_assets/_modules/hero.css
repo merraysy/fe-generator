@@ -1,0 +1,30 @@
+/**
+ * ====================================================================
+ * ==  @hero  ==
+ * ====================================================================
+ */
+
+.hero {
+  background-color: var(--light-gray);
+  border-radius: 8px;
+  left: 50%;
+  padding: calc(var(--base-margin) * var(--golden));
+  text-align: center;
+  top: 50%;
+  transform: translate(-50% -50%);
+  width: 480px;
+
+  & header {
+    margin-bottom: var(--base-margin);
+  } /* end-header */
+
+  & section {
+    margin-bottom: var(--base-margin);
+    text-align: left;
+
+    & .list {
+      list-style: disc;
+      margin-left: 20px;
+    } /* end-list */
+  } /* end-section */
+} /* end-hero */

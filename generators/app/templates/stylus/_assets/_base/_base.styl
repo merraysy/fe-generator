@@ -1,0 +1,35 @@
+/// ====================================================================
+/// ==  @base  ==
+/// ====================================================================
+
+body
+  color: $dark-gray
+
+  *
+    margin: 0
+    padding: 0
+  // end-all
+// end-body
+
+for $i in (1..6)
+  h{$i}
+    color: $dark
+    font-weight: 400
+
+    if $i == 1
+      font-size: em(32)
+    // end-h1
+  // end-headings
+// end-loop
+
+$a-list = link active focus hover visited
+for $stat in $a-list
+  a:{$stat}
+    color: $dark
+    text-decoration: none
+  // end-links
+// end-loop
+
+ul
+  list-style: none
+// end-ul
